@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    border:0;
+}
+
+.divHeader {
+    width:100%;
+}
+
+.divHeader .header{
+    color:white;
+    background-color: rgb(100, 98, 98);
+}
+ul {
+    list-style: none;
+}
+.paginacion{
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+}
+
+
+
+
+.pokeContainer{
+    margin-top:180px;
+}
