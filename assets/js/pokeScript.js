@@ -34,6 +34,8 @@ const drawData = async (pokeData) => {
   //geting waiting for all promises 
   const pokeDetail = await Promise.all(promesas);
 
+  console.log(pokeDetail)
+
   //draswing the pokemon
   pokeDetail.forEach((el) => {
     html += `
@@ -41,10 +43,10 @@ const drawData = async (pokeData) => {
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="${el.sprites.front_default}" alt="Card image cap">
         <div class="card-body">
-    <h5 class="card-title">${el.name}</h5>
+    <h3 class="card-title text-center">${el.name}</h3>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Weight ${el.weight}</li>
+    <li class="list-group-item"> Weight ${el.weight}</li>
     <li class="list-group-item">Height ${el.height}</li>
 
   </ul>
@@ -55,11 +57,14 @@ const drawData = async (pokeData) => {
   document.getElementById("pokeData").innerHTML = html;
 };
 
+
 const paginacion = (prev, next, count) => {
+
+
   let html = `<li class="page-item ${prev ? "" : "disabled"}">
-    <a class="page-link" onclick="getData('${prev}')"> &lsaquo; </a> </li>
+    <a class="page-link size-row " onclick="getData('${prev}')"> &lsaquo; </a> </li>
     <li class="page-item ${next ? "" : "disabled"}"> 
-    <a class="page-link" onclick="getData('${next}')"> &rsaquo;</a></li>`;
+    <a    class="page-link size-row" onclick="getData('${next}')"> &rsaquo;</a></li>`;
 
   document.getElementById("paginacion").innerHTML = html;
 };

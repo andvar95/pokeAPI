@@ -20,6 +20,15 @@ ul {
     justify-content:space-evenly;
 }
 
+.size-row{
+    font-size:20px;
+}
+
+footer{
+    color:white;
+    background-color: rgb(100, 98, 98)
+}
+
 
 
 
